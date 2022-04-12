@@ -26,13 +26,8 @@ Le site doit permettre d'accéder aux fonctionnalitées suivantes :
 Fonctionnalités supplémentaires :  
 - Le moteur pour les recherches avancées sur le catalogue : recherche sur l'ensemble des champs des fiches produits, y compris les tarifs et les propriétés additionnelles. 
 - Gestion des promotions : 
-* promotion par produit et par client : mise en place de système promotionnel personnalisée en 
-fonction des clients ou/et en fonction des produits 
-2- Fonctionnalités en "back office" 
-- Gestion des utilisateurs : 
-* Ajout / modification / suppression des profils (administrateurs /  utilisateurs) 
-- Gestion du contenu visuel : 
-* Ajout / modification / suppression de produits (images / texte) 
+* promotion par produit : mise en place de système promotionnel personnalisée pour chaque produit ou chaque catégorie
+2- Fonctionnalités en "back office"
 - Gestion du contenu informationnel : 
 * Ajout / modification / suppression des actualités (blog et promotion) 
 - Gestion des catalogues : 
@@ -40,3 +35,4 @@ fonction des clients ou/et en fonction des produits
 * Gestion des statuts des articles (en promotion, en rupture de stock). 
 * Gestion des stocks : ajout / modification / suppression des quantités disponibles par produit  
 * Alerte administrateur pour les produits hors stocks
+* Gestion des status des commandes(en cours de préparation, en cours de livraison, livrée)
