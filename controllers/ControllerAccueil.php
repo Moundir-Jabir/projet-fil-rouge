@@ -2,6 +2,8 @@
 class ControllerAccueil{
     public function __construct($url){
         $view = new View('PageAccueil');
-        $view->generate(array());
+        $produit = new Produit();
+        $promos = $produit->getProduitsPromo();
+        $view->generate(array("promos" => $promos));
     }
 }

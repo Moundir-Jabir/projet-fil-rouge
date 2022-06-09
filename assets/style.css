@@ -16,6 +16,10 @@
     margin-top: 15px;
     margin-bottom: 20px;
 }
+.hover:hover{
+    background-color: #dfdfdf;
+    cursor: pointer;
+}
 .orange{
     background-color: #FF5235;
     color: white;

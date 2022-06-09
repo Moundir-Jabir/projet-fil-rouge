@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="<?= URL."assets/style.css" ?>">
     <title>iStore Maroc</title>
 </head>
 <body>
@@ -36,7 +36,7 @@
                   </li>
                 </ul>
                 <div class="me-5">
-                    <a href="<?= URL."profil" ?>"><img src="assets/icons/user-solid.svg" alt="User ico"></a>
+                    <a href="<?= URL."profil" ?>"><img src="<?= URL."assets/icons/user-solid.svg" ?>" alt="User ico"></a>
                     <a href="<?= URL."panier" ?>" class="position-relative">
                     <i style="margin: 15px;color: black;" class="fa-solid fa-cart-shopping"></i>
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
