@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+/********* Styling Acceuil Page ************/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+.submit
+{
+    background-color: #FF5235;
+    color: white;
+    border: none;
+    height: 44px;
+    border-radius: 4px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.orange{
+    background-color: #FF5235;
+    color: white;
+}
+form span{
+    float: right;
+    color: red;
+}
+.h2{
+    color: #FF5235;
+}
+.h1{
+    text-align: center;
+    color: #FF5235;
+    padding: 20px;
+}
+.navbar-brand{
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+.nav-link , .readMoreLinks{
+    color: black !important;
+}
+.firstSectionImg{
+    width: 90%;
+    height: 600px;
+    background-image: url("img/bg@2x.png");
+    background-size: cover;    
+}
+#firstSectionContent{
+    margin-right: 10rem;
+    padding-top: 10rem;
+}
+#firstSectionContent > h1 {
+    font-weight: lighter;
+    letter-spacing: 6px;
+}
+#firstSectionContent > p {
+    margin-bottom: 2.6rem;
+    color: #7C7A7A;
+    width: 340px;
+}
+.AcceuilIconsC{
+    margin-top: 7rem;
+}
+#loadMoreButt{
+    border: none;
+    color: white;
+    background-color: #FF5235;
+    padding: 1.1rem;
+    width: 260px;
+    font-weight: bold;
+}
+.section4C{
+    margin-top: 10rem;
+}
+.section4Parag {
+    width: 270px;
+}
+.readMoreLinks{
+    font-weight: bold;
+}
+#soldedOrNew{
+    position: absolute;
+    top: 3%;
+    width: 94%;
+}
+#soldedOrNew span {
+    padding: 0.3rem;
+    background-color: #FFDEDE;
+}
+@media only screen and (max-width: 767px){
+.section4Parag{
+    width: auto !important;
+}
+#soldedOrNew{
+    width: 89%;
+}
+}
+#acceuilFooter{
+    margin-top: 12rem;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    background-color: #F6F6F6;
+}
+#footerSeparatorAcc{
+    margin-top: 3rem;
+    background: grey;
+    height: 1px;
+}
+.navRectangles{
+    cursor: pointer;
+    margin: 0.4rem;
+    border: 1px solid black;
+    width: 20px;
+    height: 30px;
+}
+#navRectangleActive{
+    border-color: blue;
+}
+/************************* End Acceuil Page *************************/
+
+/************************ Start Produits Page ***********************/
+.navRectanglesProduits{
+    text-align: center;
+    vertical-align: middle;
+    width: 30px;
+    height: 45px;
+    cursor: pointer;
+    margin: 0.4rem;
+    padding: 0.5rem;
+    border: 1px solid grey;
+    color: black;
+}
+#navRectProduActive{
+    color: white;
+    background-color: var(--orange-color);
+}
+.h3ContainProd{
+    width: 100%;
+    background-color: #F5F5F5;
+}
+.wrapper{
+    position: relative;
+    width: 300px;
+    padding: 0.5rem;
+}
+.rangeCont{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    margin-top: 1rem;
+}
+input[type="range"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100%;
+    outline: none;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    background-color: transparent;
+    pointer-events: none;
+}
+.slider-track{
+    width: 100%;
+    height: 5px;
+    background-color: var(--orange-color);
+    position: absolute;
+    top: 43%;
+    bottom: 0;
+    border-radius: 5px;
+}
+input[type="range"]::-webkit-slider-runnable-track{
+    -webkit-appearance: none;
+    height: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 1rem;
+    width: 1rem;
+    cursor: pointer;
+    background-color: black;
+    border-radius: 50%;
+    pointer-events: auto;
+    margin-top: -10px;
+}
+
+input[type="range"]:active::-webkit-slider-thumb{
+    background-color: white;
+    border: 3px solid var(--orange-color);
+}
+.values{
+    background-color: var(--orange-color);
+    width: 32%;
+    position: relative;
+    margin: auto;
+    padding: 10px 0;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    font-size: 17px;
+}
+.values::before{
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-top: 15px solid var(--orange-color);
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    margin: auto;
+    bottom: -14px;
+    left: 0;
+    right: 0;
+}
+select {
+    width: 100%;
+    background-color: #F6F6F6;
+    color: grey;
+    padding: 0.5rem;
+}
+#filterButt{
+    margin-top: 2rem;
+    padding: 1rem;
+    width: 150px;
+}
+.devicesList a{
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+#soldedOrNewProduct{
+    position: absolute;
+    top: 3%;
+    left: 12%;
+    width: 100%;
+}
+/************************ End Produits Page ***********************/
+
+
+/************************ Start Product info Page ***********************/
+#stepperC{
+    border: 2px solid black;
+    padding: 0.3rem;
+    height: 50px;
+}
+#addToCart{
+    height: 50px;
+    padding: 0.5rem;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    background-color: var(--orange-color);
+    color: white;
+    font-weight: bold;
+    border: none;
+    vertical-align: middle;
+}
+.plusMin{
+    cursor: pointer;
+}
+#Desc1conta{
+    width: 55%;
+}
+#DescSeparator{
+    width: 1px;
+    background-color: rgb(203, 203, 203);
+}
+#Desc2conta{
+    width: 40%;
+}
+/************************ End Product info Page ***********************/
+
+/************************ Start à Propos  Page ***********************/
+
+#aboutUsSmallImg{
+position: absolute;
+right: -15%;
+top: 65%;
+}
+#whoWeAreC{
+    width: 500px;
+}
+/************************ End à Propos  Page ***********************/
+
+/************************ Start Contact Page ***********************/
+.iframeC{
+    overflow-y: hidden !important;
+}
+.contactInputs{
+padding-bottom: 0.3rem;
+background-color: transparent;
+border: none;
+font-size: 15px;
+outline: 0;
+}
+.contactInputs:focus  {
+ border-bottom: 1px solid var(--orange-color);
+}
+.contactInputs:focus::placeholder {
+    color: var(--orange-color);
+}
+#contactTextera{
+    padding: 1rem;
+    border: none;
+    height: 250px;
+}
+#contactTextera:focus {
+    outline-color: var(--orange-color);
+    
+}
+/************************ End Contact Page ***********************/
