@@ -20,4 +20,8 @@ class Compte extends Model{
         $db = null;
         return $data;
     }
+
+    public function getUserById($id){
+        return $this->getById('compte','idCompte',$id);
+    }
 }
