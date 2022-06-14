@@ -75,7 +75,7 @@
                   <span>-<?= $promo->promotion; ?>%</span>
                 </div>
                 <img style="width: 50%;" src="<?= URL.$promo->imageProduit; ?>"/>
-                <span class="d-block mt-3 mb-3"><?= $promo->nomProduit; ?></span>
+                <span class="d-block mt-3 mb-3"> <a class="product" href="<?= URL."ficheproduit/$promo->idProduit" ?>"> <?= $promo->nomProduit; ?> </a> </span>
                 <span><del class="me-3"><?= $promo->prixProduit; ?> dh</del><?= $promo->prixProduit - ($promo->prixProduit * $promo->promotion / 100) ?> dh</span>
               </div>
             <?php } ?>

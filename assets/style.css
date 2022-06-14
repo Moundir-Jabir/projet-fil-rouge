@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+:root{
+    --orange-color : #FF5235;
+}
 /********* Styling Acceuil Page ************/
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+}
+.active {
+    color: var(--orange-color) !important;
 }
 .submit
 {
@@ -15,6 +21,9 @@
     border-radius: 4px;
     margin-top: 15px;
     margin-bottom: 20px;
+}
+.devicesList a:hover{
+    color: var(--orange-color) !important;
 }
 .hover:hover{
     background-color: #dfdfdf;
@@ -27,6 +36,13 @@
 form span{
     float: right;
     color: red;
+}
+.product{
+    text-decoration: none;
+    color: black;
+}
+.product:hover{
+    color: #FF5235;
 }
 .h2{
     color: #FF5235;
@@ -316,3 +332,57 @@ outline: 0;
     
 }
 /************************ End Contact Page ***********************/
+
+/************************ Start Panier Page ***********************/
+.PanierContentC{
+    overflow-y: hidden;
+    width: 1260px;
+    border-bottom: 1px solid rgb(222, 222, 222);
+}
+
+@media only screen and (min-width: 1400px){
+    #panierFsection{
+        overflow-x: hidden !important;
+    }
+}
+#contShoopingButt{
+    width: 300px;
+    padding: 1rem;
+}
+@media only screen and (max-width: 575px){
+    .secondSectPanier{
+        align-items: center !important;
+    }
+}
+
+/************************ End Panier Page ***********************/
+
+/************************ Start Validation commande Page ***********************/
+
+.validCommLabels{
+    color: grey;
+}
+.validCommInputs{
+    border: none;
+    background-color: #F6F7FB;
+}
+.firstLastInputs{
+    width: 95%;
+}
+.validCommSeparator{
+    height: 1px;
+    background-color: #ece9e9;
+}
+#totalCommCont{
+    background-color: #FBFBFB;
+    width: 500px;
+}
+#placeOrderButt{
+    font-size: 15px;
+    padding: 0.5rem;
+}
+#emailinputVC{
+    padding: 0.7rem;
+    border: none;
+}
+/************************ End Validation commande Page ***********************/

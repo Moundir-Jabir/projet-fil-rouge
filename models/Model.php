@@ -14,10 +14,10 @@ abstract class Model{
         return $data;
     }
 
-    protected function getById($table){
+    protected function getById($table, $matricule, $id){
         $db = self::getBdd();
-        $query = $db->query('SELECT * FROM ' .$table."WHERE");
-        $data = $query->fetchAll(PDO::FETCH_OBJ);
+        $query = $db->query("SELECT * FROM $table WHERE $matricule = $id");
+        $data = $query->fetch(PDO::FETCH_OBJ);
         $query = null;
         $db = null;
         return $data;
@@ -62,6 +62,25 @@ abstract class Model{
         $smt->execute();
         $smt = null;
         $db = null;
+    }
+
+    protected function addId($table, $attributs, $valeurs){
+        $db = self::getBdd();
+        if($db == null){
+            return;
+        }
+        $valeurs = array_map(function ($valeur){
+            return "'".$valeur."'";
+        },$valeurs);
+        $attributs = implode(',', $attributs);
+        $valeurs = implode(',', $valeurs);
+        $sql = "INSERT INTO ".$table. '('. $attributs .')'. 'VALUES'. '('. $valeurs .')';
+        $smt = $db->prepare($sql);
+        $smt->execute();
+        $id = $db->lastInsertId();
+        $smt = null;
+        $db = null;
+        return $id;
     }
 
     protected function update($table, $tableau, $matricule, $id){

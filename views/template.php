@@ -40,7 +40,7 @@
                     <a href="<?= URL."panier" ?>" class="position-relative">
                     <i style="margin: 15px;color: black;" class="fa-solid fa-cart-shopping"></i>
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                        9
+                        <?php if(isset($_SESSION['panier'])){echo count($_SESSION['panier']);}else{ echo "0"; } ?>
                     </span>
                     </a>
                 </div>
