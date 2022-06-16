@@ -12,6 +12,18 @@ class Produit extends Model{
         return $this->getById("produit", "idProduit", $id);
     }
 
+    public function produitsRupture(){
+        $db = self::getBdd();
+        if($db == null){
+            return;
+        }
+        $query = $db->query('SELECT COUNT(*) FROM `produit` WHERE quantiteStock < 10');
+        $data = $query->fetchColumn();
+        $query = null;
+        $db = null;
+        return $data;
+    }
+
     public function updateProduit($tableau, $id){
         $this->update("produit", $tableau, "idProduit", $id);
     }

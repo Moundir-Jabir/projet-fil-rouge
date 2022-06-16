@@ -18,6 +18,18 @@ class Commande extends Model{
         return $data;
     }
 
+    public function nouvellesCommandes(){
+        $db = self::getBdd();
+        if($db == null){
+            return;
+        }
+        $query = $db->query('SELECT COUNT(*) FROM `commande` WHERE etat = "en cours de traitement"');
+        $data = $query->fetchColumn();
+        $query = null;
+        $db = null;
+        return $data;
+    }
+
     public function getCommandes(){
         $db = self::getBdd();
         if($db == null){

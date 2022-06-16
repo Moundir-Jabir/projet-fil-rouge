@@ -113,7 +113,7 @@
         <td><img style="width: 100px;" src="<?= $produit->imageProduit ?>"></td>
         <td><?= $produit->nomProduit ?></td>
         <td> <input type="number" name="prixProduit" value="<?= $produit->prixProduit ?>"> dh</td>
-        <td> <input type="number" name="quantiteStock" value="<?= $produit->quantiteStock ?>"> articles</td>
+        <td class="<?php if($produit->quantiteStock == 0){echo "bg-danger";}elseif($produit->quantiteStock < 10){ echo "bg-warning"; } ?>"> <input type="number" name="quantiteStock" value="<?= $produit->quantiteStock ?>"> articles</td>
         <td> <input type="number" name="promotion" value="<?= $produit->promotion ?>"> %</td>
         <td> <input type="date" name="finPromotion" value="<?= $produit->finPromotion ?>"></td>
         <td><button type="submit">Modifier</button></td>

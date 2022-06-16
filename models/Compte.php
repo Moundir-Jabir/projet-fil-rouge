@@ -24,4 +24,16 @@ class Compte extends Model{
     public function getUserById($id){
         return $this->getById('compte','idCompte',$id);
     }
+
+    public function nbrClient(){
+        $db = self::getBdd();
+        if($db == null){
+            return;
+        }
+        $query = $db->query('SELECT COUNT(*) FROM `compte` WHERE typeCompte = "client"');
+        $data = $query->fetchColumn();
+        $query = null;
+        $db = null;
+        return $data;
+    }
 }
