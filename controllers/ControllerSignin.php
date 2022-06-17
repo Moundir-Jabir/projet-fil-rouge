@@ -8,10 +8,7 @@ class ControllerSignin{
             $_POST['password'] = hash("md5", $_POST['password']);
             $_POST['image'] = uploadFile();
             if($compte->addCompte(array_values($_POST)) == 'bien'){
-                $user = new stdClass();
-                foreach ($_POST as $key => $value) {
-                    $user->$key = $value;
-                }
+                $user = $compte->getUserByEmailAndPassword($_POST["email"], $_POST['password']);
                 $_SESSION['user'] = $user;
                 header("Location: ".URL);
             }else{
